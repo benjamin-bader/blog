@@ -1,0 +1,46 @@
+baseurl = "http://www.bendb.com/"
+languageCode = "en-us"
+title = "(defblog :bendb-dot-com)"
+author = "Ben Bader"
+theme = "blackburn"
+
+copyright = "&copy; 2016.  All rights reserved."
+canonifyurls = true
+
+[indexes]
+	tag = "tags"
+	topic = "topics"
+
+[params]
+  googleAnalytics = "UA-47968134-1"
+  highlightjs = "androidstudio"
+  dateFormat = "02 Jan 2006, 15:04"
+  subtitle = ""
+  brand = "bendb.com"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pre = "<i class='fa fa-home fa-fw'></i>"
+    identifier = "home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+  	name = "Posts"
+  	pre = "<i class='fa fa-list fa-fw'></i>"
+  	identifier = "posts"
+  	url = "/post/"
+  	weight = 2
+
+  [[menu.main]]
+  	name = "About"
+  	pre = "<i class='fa fa-user fa-fw'></i>"
+  	identifier = "about"
+  	url = "/about/"
+  	weight = 3
+
+[social]
+  github = "benjamin-bader"
+  linkedin = "bendb"
+  twitter = "pianoben"
