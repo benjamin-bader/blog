@@ -11,4 +11,8 @@ blog:
 deploy: blog
 	rsync -avz -e "ssh -i /home/ben/.ssh/ben_azure -o StrictHostKeyChecking=no" --delete public-blog/ bendb.cloudapp.net:/home/ben/www
 
-.PHONY: all server blog deploy
+clean:
+	rm -rf public-blog
+
+.PHONY: all server blog deploy clean
+
