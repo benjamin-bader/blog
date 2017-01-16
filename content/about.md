@@ -3,7 +3,7 @@ title = "About"
 description = "About the author"
 +++
 
-My name is [Ben Bader](https://linkedin.com/in/bendb).  I'm a [programmer](https://github.com/benjamin-bader), amateur pianist, and transplated Midwesterner.  I work in San Francisco, on a Macbook, writing Android apps, for Microsoft - **this blog and its opinions are mine alone**.  I like to write about programming, startups, and occasionally 
+My name is [Ben Bader](https://linkedin.com/in/bendb).  I'm a [programmer](https://github.com/benjamin-bader), amateur pianist, and transplated Midwesterner.  I work in San Francisco, on a Macbook, writing Android apps, for Microsoft - **this blog and its opinions are mine alone**.  I like to write about programming, startups, and side-projects.
 
 ## Background
 
