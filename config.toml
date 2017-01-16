@@ -5,7 +5,7 @@ author = "Ben Bader"
 theme = "cocoa"
 
 layoutdir = "layouts"
-publishdir = "public-home"
+publishdir = "public-blog"
 pygmentscodefences = true
 pygmentsstyle = "bw"
 pluralizelisttitles = false
