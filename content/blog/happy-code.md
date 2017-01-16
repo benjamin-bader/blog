@@ -12,7 +12,7 @@ My favorite parts of being a programmer are those moments when, after ruminating
 
 Briefly, part of Thrifty's job is to generate Java classes corresponding to structs defined in Thrift IDL.  Part of that is generating descriptive `.toString()` methods.  For the first release, Thrifty generated code like this:
 
-```
+``` java
 public String toString() {
   StringBuilder sb = new StringBuilder("Foo{");
   sb.append("bar=");
@@ -29,7 +29,7 @@ Not terrible, for generated code, but nothing to write home about.  In particula
 
 If you or I were to write this by hand, it would look something like:
 
-```
+``` java
 public String toString() {
   return "Foo{bar=" + this.bar + ", baz=" + this.baz + "}";
 }
@@ -39,7 +39,7 @@ I should point out that this is far from the most pressing issue - nobody realis
 
 Before the fix, the code to generate `toString()` was relatively easy to follow, once you know the idioms of Square's JavaPoet codegen library.  Here's the (only slightly) simplified original version, which is hacky and very much rushed out the door by me
 
-```
+``` java
 // The actual code is hairier, handling some extra things
 MethodSpec.Builder toString = MethodSpec.methodBuilder("toString")
     .addAnnotation(Override.class)
@@ -75,7 +75,7 @@ toString.addStatement("return sb.toString()");
 
 OK!  Pretty simple, right?  Except for that `index` bit, it's not so bad.  Easy to read, relatively speaking.  It's easy because generating this kind of code is uncomplicated.  The better example, the one without `StringBuilder`, takes a good deal more consideration.  Around 20,000 feet into the air, I started to think.  What needs to change here?  Obviously, we need to detect when two "compile-time-constant" strings are adjacent, like the example above of the `", "` followed by `"baz="`.  How do we track that?  We could keep the same structure, but just add pieces of strings together:
 
-```
+``` java
 return "Foo{" + "bar=" + this.bar + ", " + "baz=" + this.baz + "}";
 ```
 
@@ -83,7 +83,7 @@ An improvement!  This is significantly more readable, and just about every compi
 
 Turns out, the solution that I hit on is to introduce a new class (hey, it's Java) to represent a chunk of code, which can be either a literal string or a reference to a field.  You can build a list of these chunks in one pass through the field list, and then emit each chunk of code in order.  Splitting the generation into two passes removes the need for hard-to-reason-about flags, and lets us focus on doing this more-complicated process correctly:
 
-```java
+``` java
 class Chunk {
   final String formatSpecifier;
   final String value;

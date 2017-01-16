@@ -1,46 +1,37 @@
 baseurl = "http://www.bendb.com/"
 languageCode = "en-us"
-title = "(defblog :bendb-dot-com)"
+title = "bendb"
 author = "Ben Bader"
-theme = "blackburn"
+theme = "cocoa"
 
-copyright = "&copy; 2016.  All rights reserved."
+layoutdir = "layouts"
+publishdir = "public"
+pygmentscodefences = true
+pygmentsstyle = "bw"
+pluralizelisttitles = false
+
+copyright = "&copy; 2017.  All rights reserved."
 canonifyurls = true
+builddrafts = false
+contentdir = "content"
+googleAnalytics = "UA-47968134-1"
 
-[indexes]
-	tag = "tags"
-	topic = "topics"
+[permalinks]
+fixed = ":title/"
+blog = "blog/:slug/"
 
 [params]
-  googleAnalytics = "UA-47968134-1"
-  highlightjs = "androidstudio"
-  dateFormat = "02 Jan 2006, 15:04"
-  subtitle = ""
-  brand = "bendb.com"
+  author = "Ben Bader"
+  cachebuster = true
+  dateform = "Jan 2, 2006"
+  dateformfull = "Mon Jan 2 2006 15:04:05 PST"
+  description = "Just Android stuff"
+  email = "ben@bendb.com"
+  github = "//github.com/benjamin-bader"
+  highlightjs = false
+  lang = "en"
+  linkedin = "//linkedin.com/in/bendb"
+  twitter = "//twitter.com/pianoben"
+  selfIntro = ""
 
-[menu]
-  [[menu.main]]
-    name = "Home"
-    pre = "<i class='fa fa-home fa-fw'></i>"
-    identifier = "home"
-    url = "/"
-    weight = 1
-
-  [[menu.main]]
-  	name = "Posts"
-  	pre = "<i class='fa fa-list fa-fw'></i>"
-  	identifier = "posts"
-  	url = "/post/"
-  	weight = 2
-
-  [[menu.main]]
-  	name = "About"
-  	pre = "<i class='fa fa-user fa-fw'></i>"
-  	identifier = "about"
-  	url = "/about/"
-  	weight = 3
-
-[social]
-  github = "benjamin-bader"
-  linkedin = "bendb"
-  twitter = "pianoben"
+  avatar = "img/profile.jpg"
