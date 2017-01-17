@@ -1,4 +1,4 @@
-baseurl = "http://www.bendb.com/"
+baseurl = "https://www.bendb.com/"
 languageCode = "en-us"
 title = "bendb"
 author = "Ben Bader"
