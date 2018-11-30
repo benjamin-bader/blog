@@ -9,7 +9,7 @@ blog:
 	find public-blog -type f -print0 | xargs -0 chmod 0644
 
 deploy: blog
-	rsync -avz --exclude-from=.rsync-excludes -e "ssh -i /home/ben/.ssh/ben_azure -o StrictHostKeyChecking=no" --delete public-blog/ bendb.cloudapp.net:/home/ben/www
+	rsync -avz --exclude-from=.rsync-excludes -e "ssh -i ~/.ssh/bendb_aws.pem -o StrictHostKeyChecking=no" --delete public-blog/ ubuntu@direct.bendb.com:/home/ubuntu/www
 
 clean:
 	rm -rf public-blog

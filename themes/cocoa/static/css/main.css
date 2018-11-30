@@ -644,6 +644,14 @@ section.main .content .markdown li {
   list-style-type: disc;
   list-style-position: inside;
 }
+/*BEGIN MANUAL EDIT*/
+/*
+section.main .content .markdown ol li {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+*/
+/*END MANUAL EDIT*/
 section.main .content .markdown em {
   font-style: italic;
 }
