@@ -10,7 +10,7 @@ pygmentscodefences = true
 pygmentsstyle = "bw"
 pluralizelisttitles = false
 
-copyright = "&copy; 2017.  All rights reserved."
+copyright = "&copy; 2020.  All rights reserved."
 canonifyurls = true
 builddrafts = false
 contentdir = "content"
