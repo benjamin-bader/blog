@@ -4,7 +4,7 @@ server:
 	hugo server --buildDrafts -w
 
 blog:
-	hugo --buildDrafts -d public-blog -b https://www.bendb.com/
+	hugo -d public-blog -b https://www.bendb.com/
 	find public-blog -type d -print0 | xargs -0 chmod 0755
 	find public-blog -type f -print0 | xargs -0 chmod 0644
 
