@@ -11,7 +11,7 @@ You're starting at a new company, and they use GitHub for source control.  This 
 
 This is great, _until_ you want to keep working on your personal things at the same time.  How on Earth can we make SSH behave properly?
 
-*TL;DR*: Use this SSH configuration:
+*TL;DR*: Use this SSH configuration (usually in `~/.ssh/config`):
 
 ```
 # Assuming that you have the following SSH keys:
