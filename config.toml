@@ -2,7 +2,7 @@ baseurl = "https://www.bendb.com/"
 languageCode = "en-us"
 title = "bendb"
 author = "Ben Bader"
-theme = "simple"
+theme = "cocoa"
 
 layoutdir = "layouts"
 publishdir = "public-blog"
@@ -21,15 +21,17 @@ fixed = ":title/"
 blog = "blog/:slug/"
 
 [params]
-author = "Ben Bader"
-cachebuster = true
-dateform = "Jan 2, 2006"
-dateformfull = "Mon Jan 2 2006 15:04:05 PST"
-description = "Just Android stuff"
-email = "ben@bendb.com"
-github = "//github.com/benjamin-bader"
-highlightjs = false
-lang = "en"
-blurb = "Ramblings and musings."
+  author = "Ben Bader"
+  cachebuster = true
+  dateform = "Jan 2, 2006"
+  dateformfull = "Mon Jan 2 2006 15:04:05 PST"
+  description = "Just Android stuff"
+  email = "ben@bendb.com"
+  github = "//github.com/benjamin-bader"
+  highlightjs = false
+  lang = "en"
+  linkedin = "//linkedin.com/in/bendb"
+  twitter = "//twitter.com/pianoben"
+  selfIntro = ""
 
-avatar = "img/profile.jpg"
+  avatar = "img/profile.jpg"
