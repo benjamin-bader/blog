@@ -34,4 +34,4 @@ blog = "blog/:slug/"
   twitter = "//twitter.com/pianoben"
   selfIntro = ""
 
-  avatar = "img/profile.jpg"
+  logofile = "img/profile.jpg"
