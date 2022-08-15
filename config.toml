@@ -33,5 +33,5 @@ blog = "blog/:slug/"
   linkedin = "bendb"
   twitter = "pianoben"
   selfIntro = ""
-
+  disablefancyfonts = false
   logofile = "img/profile.jpg"
