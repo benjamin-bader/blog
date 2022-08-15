@@ -2,3 +2,4 @@ out/
 public/
 public-blog/
 venv/
+.vscode/
